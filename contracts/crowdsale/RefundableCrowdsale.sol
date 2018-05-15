@@ -42,6 +42,7 @@ contract RefundableCrowdsale is FinalizableCrowdsale {
   function finalization() internal {
     if (goalReached()) {
       vault.close();
+      tokenTimelock.release();
     } else {
       vault.enableRefunds();
     }

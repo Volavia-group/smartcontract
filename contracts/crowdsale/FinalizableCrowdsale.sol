@@ -23,11 +23,11 @@ contract FinalizableCrowdsale is Crowdsale {
   function finalize() onlyOwner public {
     require(!isFinalized);
     require(hasEnded());
-
     finalization();
     Finalized();
-
     isFinalized = true;
+    
+    
   }
 
    
@@ -38,5 +38,6 @@ contract FinalizableCrowdsale is Crowdsale {
    * executed entirely.
    */
   function finalization() internal {
+    
   }
 }
