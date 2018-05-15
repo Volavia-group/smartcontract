@@ -1,7 +1,6 @@
 pragma solidity ^0.4.18;
 
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
-import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 import "./Crowdsale.sol";
 
 
@@ -10,7 +9,7 @@ import "./Crowdsale.sol";
  * @dev Extension of Crowdsale where an owner can do extra work
  * after finishing.
  */
-contract FinalizableCrowdsale is Crowdsale, Ownable {
+contract FinalizableCrowdsale is Crowdsale {
   using SafeMath for uint256;
 
   bool public isFinalized = false;
@@ -31,9 +30,7 @@ contract FinalizableCrowdsale is Crowdsale, Ownable {
     isFinalized = true;
   }
 
-  function releaseTokens() onlyOwner external {
-     tokenTimelock.release();
-  } 
+   
 
   /**
    * @dev Can be overridden to add finalization logic. The overriding function

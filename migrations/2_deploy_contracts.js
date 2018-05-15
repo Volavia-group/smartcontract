@@ -20,14 +20,12 @@ function ether (n) {
 };
     function liveDeploy(deployer,accounts){
     const BigNumber = web3.BigNumber;
-    const RATE = 1;
-    const startTime = latestTime() + duration.minutes(5);
-    const endTime = startTime + duration.weeks(1);
-    const cap = ether(4);
+    const RATE = 25;
+    const cap = ether(5);
     const goal = ether(3);
-    const minTransactionValue = ether(2);
-    const releaseTime = endTime + duration.minutes(10);
-    console.log([startTime,endTime,RATE,goal,cap,accounts[0],releaseTime,minTransactionValue]);
-    return deployer.deploy(PreIcoCrowdsale, startTime, endTime, RATE, goal, cap, accounts[0], releaseTime, minTransactionValue);
+    const minTransactionValue = ether(1);
+    const releaseTime = latestTime() + duration.minutes(30);
+    console.log([RATE,goal,accounts[0],releaseTime,minTransactionValue]);
+    return deployer.deploy(PreIcoCrowdsale,RATE, goal, accounts[0], releaseTime, minTransactionValue);
 
 }
