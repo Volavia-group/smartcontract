@@ -40,8 +40,8 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   bool public hasClosed = false;
 
-  //current exchange rate
-  uint256 public currentExchangeRate;
+  uint256 public tokensSold;
+
 
 
 
@@ -97,8 +97,8 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
     // update state
     weiRaised = weiRaised.add(weiAmount);
+    tokensSold = tokensSold.add(tokens);
 
-    
     tokenTimelock = new TokenTimelock(token, beneficiary, releaseTime);
     token.mint(tokenTimelock,tokens);
     TokenPurchase(msg.sender, beneficiary, weiAmount, tokens);
@@ -126,8 +126,11 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   // Override this method to have a way to add business logic to your crowdsale when buying
   function getTokenAmount(uint256 weiAmount) internal view returns(uint256) {
-    currentExchangeRate = rate.div(price);
-    return weiAmount.mul(currentExchangeRate);
+
+    uint256 usdValueOfCustomerEther = price.mul(weiAmount) / 1 ether;
+    uint256 tokenPerUsd = 1 ether / rate;
+    return tokenPerUsd.mul(usdValueOfCustomerEther);
+  
   }
 
   function getTokens(uint256 tokenCount) internal view returns(uint256) {
@@ -152,14 +155,10 @@ contract Crowdsale is Ownable, TestOraclizeCall{
     require(hasClosed != true);
     uint256 tokens = getTokens(tokenCount);
     token.mint(beneficiary, tokens);
+    tokensSold = tokensSold.add(tokens);
     Invested(beneficiary, tokenCount, tokens);
     forwardFunds();
-
   }
 
-  function releaseTokens() onlyOwner external {
-    require(hasClosed != false);
-     tokenTimelock.release();
-  }
 
 }

@@ -20,9 +20,9 @@ function ether (n) {
 };
     function liveDeploy(deployer,accounts){
     const BigNumber = web3.BigNumber;
-    const RATE = 25;
+    const RATE = 25; 
     const cap = ether(5);
-    const goal = ether(3);
+    const goal = ether(1);
     const minTransactionValue = ether(1);
     const releaseTime = latestTime() + duration.minutes(30);
     console.log([RATE,goal,accounts[0],releaseTime,minTransactionValue]);

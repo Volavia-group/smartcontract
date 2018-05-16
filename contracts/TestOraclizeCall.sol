@@ -14,12 +14,12 @@ contract TestOraclizeCall is usingOraclize {
     function __callback(bytes32 _myid, string _result){
         require(msg.sender == oraclize_cbAddress());
         Log(_result);
-        price = parseInt(_result, 2);
+        price = parseInt(_result);
     }
     function __callback(bytes32 _myid, string _result, bytes proof){
         require(msg.sender == oraclize_cbAddress());
         Log(_result);
-        price = parseInt(_result, 2);
+        price = parseInt(_result);
     }
 
     function update() payable {
