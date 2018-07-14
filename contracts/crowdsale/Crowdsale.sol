@@ -70,7 +70,6 @@ contract Crowdsale is Ownable, TestOraclizeCall{
     
     rate = _rate;
     wallet = _wallet;
-    releaseTime = _releaseTime;
     minTransactionValue = _minTransactionValue;
   }
 
