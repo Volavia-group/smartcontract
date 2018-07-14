@@ -91,7 +91,7 @@ contract Crowdsale is Ownable, TestOraclizeCall{
     uint256 weiAmount = msg.value;
     
     // calculate token amount to be created
-    uint256 tokens = getTokenAmount(weiAmount);
+    tokens = getTokenAmount(weiAmount);
      
     // update state
     weiRaised = weiRaised.add(weiAmount);
@@ -132,7 +132,7 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   
   }
 
-  function getTokens(uint256 tokenCount) internal returns(uint256) {
+  function getTokens(uint256 tokenCount) internal pure returns(uint256) {
     return tokenCount.mul(1);
   }
 
@@ -153,7 +153,6 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   function preallocate(address beneficiary, uint256 tokenCount) onlyOwner external {
     require(beneficiary != address(0));
     require(hasClosed != true);
-    uint256 tokens = getTokens(tokenCount);
     token.mint(beneficiary, tokens);
     tokensSold = tokensSold.add(tokens);
     Invested(beneficiary, tokenCount, tokens);

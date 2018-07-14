@@ -16,7 +16,7 @@ contract TestOraclizeCall is usingOraclize {
     }
 
 
-    function __callback(bytes32 _myid, string _result, bytes proof){
+    function __callback(bytes32 _myid, string _result, bytes proof) public {
         if (!validIds[_myid]) revert();
         require(msg.sender == oraclize_cbAddress());
         Log(_result);
@@ -26,12 +26,12 @@ contract TestOraclizeCall is usingOraclize {
 
     }
 
-    function oraclizeGetPrice() public constant returns (uint256){
+    /*function oraclizeGetPrice() public view returns (uint256){
         return oraclize_getPrice("URL");
-    }
+    }*/
    
 
-    function updatePrice() payable {
+    function updatePrice() public payable {
         LogPrice(oraclize_getPrice("URL"));
         bytes32 queryId = oraclize_query("URL","json(https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD).USD");
         validIds[queryId] = true;
