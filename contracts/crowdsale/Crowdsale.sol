@@ -22,21 +22,21 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // The token being sold
   MintableToken public token;
 
-  // start and end timestamps where investments are allowed (both inclusive)
-  uint256 public releaseTime;
+  // Number of tokens that need to minted
+  uint256 public tokens;
+
 
   // Minumum transaction value
   uint256 public minTransactionValue;
+
   // address where funds are collected
   address public wallet;
 
-  // how many token units a buyer gets per wei
+  // Per token value in USD
   uint256 public rate;
 
   // amount of raised money in wei
   uint256 public weiRaised;
-
-  TokenTimelock public tokenTimelock;
 
   bool public hasClosed = false;
 
@@ -59,13 +59,12 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   event Invested(address receiver, uint256 tokenCount, uint256 tokens);
 
 
-  function Crowdsale(uint256 _rate, address _wallet, uint256 _releaseTime, uint256 _minTransactionValue) public {
+  function Crowdsale(uint256 _rate, address _wallet, uint256 _minTransactionValue) public {
     //require(_startTime >= now);
     //require(_endTime >= _startTime);
     require(_rate > 0);
     require(_wallet != address(0)); // checking if wallet address is not empty
     require(_minTransactionValue > 0);
-    require(_releaseTime >= now);
 
     token = createTokenContract();
     
@@ -89,18 +88,18 @@ contract Crowdsale is Ownable, TestOraclizeCall{
     require(beneficiary != address(0));
     require(validPurchase());
     require(hasClosed != true);
-
+    updatePrice(); // Calling oraclize query to update current exchange rate 
     uint256 weiAmount = msg.value;
-
+    
     // calculate token amount to be created
     uint256 tokens = getTokenAmount(weiAmount);
-
+     
     // update state
     weiRaised = weiRaised.add(weiAmount);
     tokensSold = tokensSold.add(tokens);
 
-    tokenTimelock = new TokenTimelock(token, beneficiary, releaseTime);
-    token.mint(tokenTimelock,tokens);
+    token.pause();
+    token.mint(beneficiary,tokens);
     TokenPurchase(msg.sender, beneficiary, weiAmount, tokens);
     forwardFunds();
     
@@ -125,15 +124,16 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   }
 
   // Override this method to have a way to add business logic to your crowdsale when buying
+  // price is referred to current exchange rate of USD in ETH
+  // rate is referred as per token value in USD
   function getTokenAmount(uint256 weiAmount) internal view returns(uint256) {
-
     uint256 usdValueOfCustomerEther = price.mul(weiAmount) / 1 ether;
     uint256 tokenPerUsd = 1 ether / rate;
     return tokenPerUsd.mul(usdValueOfCustomerEther);
   
   }
 
-  function getTokens(uint256 tokenCount) internal view returns(uint256) {
+  function getTokens(uint256 tokenCount) internal returns(uint256) {
     return tokenCount.mul(1);
   }
 
@@ -141,6 +141,7 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // override to create custom fund forwarding mechanisms
   function forwardFunds() internal {
     wallet.transfer(msg.value);
+    
   }
 
   // @return true if the transaction can buy tokens

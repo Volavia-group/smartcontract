@@ -20,12 +20,14 @@ function ether (n) {
 };
     function liveDeploy(deployer,accounts){
     const BigNumber = web3.BigNumber;
-    const RATE = 25; 
+    const RATE = 25; // per token valuein USD
     const cap = ether(5);
     const goal = ether(1);
     const minTransactionValue = ether(1);
-    const releaseTime = latestTime() + duration.minutes(30);
-    console.log([RATE,goal,accounts[0],releaseTime,minTransactionValue]);
-    return deployer.deploy(PreIcoCrowdsale,RATE, goal, accounts[0], releaseTime, minTransactionValue);
+    //const releaseTime = latestTime() + duration.minutes(30);
+    const value = ether(1); // Balance assigned to contract address at the time of deployment
+    const from = '0x006a8A6b87b7ABa6a9ffa66FA56B0B30FD46975d'; // Wallet address from where assignment will take place
+    console.log([RATE,goal,accounts[0],minTransactionValue,value]);
+    return deployer.deploy(PreIcoCrowdsale,RATE, goal, accounts[0], minTransactionValue,{from, value});
 
 }

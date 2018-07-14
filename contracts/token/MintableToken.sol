@@ -1,7 +1,7 @@
 pragma solidity ^0.4.18;
 
-import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+import "zeppelin-solidity/contracts/token/ERC20/PausableToken.sol";
 
 
 
@@ -11,7 +11,7 @@ import "zeppelin-solidity/contracts/ownership/Ownable.sol";
  * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
  * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
  */
-contract MintableToken is StandardToken, Ownable {
+contract MintableToken is PausableToken {
   event Mint(address indexed to, uint256 amount);
   event MintFinished();
 
@@ -46,4 +46,5 @@ contract MintableToken is StandardToken, Ownable {
     MintFinished();
     return true;
   }
-}
+} 
+
