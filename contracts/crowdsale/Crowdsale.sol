@@ -32,7 +32,7 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // address where funds are collected
   address public wallet;
 
-  // Per token value in USD
+  // Per token value in cent i.e 1 token = 25 cent
   uint256 public rate;
 
   // amount of raised money in wei
@@ -124,11 +124,11 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   // Override this method to have a way to add business logic to your crowdsale when buying
   // price is referred to current exchange rate of USD in ETH
-  // rate is referred as per token value in USD
+  // rate is referred as per token value in cent i.e 1 token = 25 cent
   function getTokenAmount(uint256 weiAmount) internal view returns(uint256) {
-    uint256 usdValueOfCustomerEther = price.mul(weiAmount) / 1 ether;
-    uint256 tokenPerUsd = 1 ether / rate;
-    return tokenPerUsd.mul(usdValueOfCustomerEther);
+    uint256 centValueOfCustomerEther = price.mul(100).mul(weiAmount) / 1 ether; // price is multiplied by 100 to convert USD to cent
+    uint256 tokenPerCent = 1 ether / rate; 
+    return tokenPerCent.mul(centValueOfCustomerEther);
   
   }
 
