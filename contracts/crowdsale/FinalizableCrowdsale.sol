@@ -41,6 +41,6 @@ contract FinalizableCrowdsale is Crowdsale {
    * executed entirely.
    */
   function finalization() internal {
-
+     token.finishMinting();
   }
 }

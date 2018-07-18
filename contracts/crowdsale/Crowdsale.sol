@@ -58,6 +58,8 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   event Invested(address receiver, uint256 tokenCount, uint256 tokens);
 
+  event logPrice(uint price);
+
 
   function Crowdsale(uint256 _rate, address _wallet, uint256 _minTransactionValue) public {
     //require(_startTime >= now);
@@ -85,11 +87,12 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // low level token purchase function
   function buyTokens(address beneficiary) public payable {
     require(beneficiary != address(0));
+    updatePrice(); // Calling oraclize query to update current exchange rate 
     require(validPurchase());
     require(hasClosed != true);
-    updatePrice(); // Calling oraclize query to update current exchange rate 
-    uint256 weiAmount = msg.value;
     
+    uint256 weiAmount = msg.value;
+    logPrice(price);
     // calculate token amount to be created
     tokens = getTokenAmount(weiAmount);
      
@@ -146,7 +149,8 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // @return true if the transaction can buy tokens
   function validPurchase() internal view returns (bool) {
     bool nonZeroPurchase = msg.value != 0;
-    bool aboveMinInvestment = msg.value >= minTransactionValue;
+    uint256 usdValueOfCustomerEther = price.mul(msg.value) / 1 ether;
+    bool aboveMinInvestment = usdValueOfCustomerEther >= minTransactionValue;
     return  nonZeroPurchase && aboveMinInvestment;
   }
 

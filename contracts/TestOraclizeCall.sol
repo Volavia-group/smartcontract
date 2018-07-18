@@ -8,7 +8,7 @@ contract TestOraclizeCall is usingOraclize {
     uint256 public amt;
     event Log(string text);
     event LogFailure(string text);
-    event LogPrice(uint256 amt);
+    //event LogPrice(uint256 amt);
     mapping(bytes32=>bool) validIds;
 
     function TestOraclizeCall() public {
@@ -32,7 +32,7 @@ contract TestOraclizeCall is usingOraclize {
    
 
     function updatePrice() public payable {
-        LogPrice(oraclize_getPrice("URL"));
+        //LogPrice(oraclize_getPrice("URL"));
         bytes32 queryId = oraclize_query("URL","json(https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD).USD");
         validIds[queryId] = true;
         
