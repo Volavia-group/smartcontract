@@ -62,15 +62,15 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b610017610090565b604051809103906000f080151561002d57600080fd5b60008054600160a060020a031916600160a060020a03929092169190911790556100556100a0565b604051809103906000f080151561006b57600080fd5b60018054600160a060020a031916600160a060020a03929092169190911790556100b0565b6040516101d9806103f583390190565b6040516101e5806105ce83390190565b610336806100bf6000396000f30060606040526004361061005e5763ffffffff60e060020a60003504166350930ca5811461006357806356b2c5bb146100785780636573ee1e1461008b578063afa03ac91461009e578063b19faed8146100b1578063d7228bb5146100c4575b600080fd5b341561006e57600080fd5b6100766100d7565b005b341561008357600080fd5b6100766100fa565b341561009657600080fd5b610076610118565b34156100a957600080fd5b610076610138565b34156100bc57600080fd5b610076610158565b34156100cf57600080fd5b610076610176565b600080546100f891600160a060020a0390911690808063ffffffff61019516565b565b6001546100f890600160a060020a031660008063ffffffff61022816565b600080546100f891600160a060020a03909116908063ffffffff6102ad16565b600080546100f891600160a060020a03909116908063ffffffff61022816565b6001546100f890600160a060020a031660008063ffffffff6102ad16565b6001546100f890600160a060020a03166000808063ffffffff61019516565b83600160a060020a03166323b872dd84848460006040516020015260405160e060020a63ffffffff8616028152600160a060020a0393841660048201529190921660248201526044810191909152606401602060405180830381600087803b15156101ff57600080fd5b6102c65a03f1151561021057600080fd5b50505060405180519050151561022257fe5b50505050565b82600160a060020a031663a9059cbb838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd5b6102c65a03f1151561029657600080fd5b5050506040518051905015156102a857fe5b505050565b82600160a060020a031663095ea7b3838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd00a165627a7a72305820e6af30283e5c9e44efe8f6b1369e5b2de942fed0286cc53fb7db8b9682f90cd200296060604052341561000f57600080fd5b6101bb8061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610173565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017b565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610180565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043516610189565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff600435811690602435165b600092915050565b600090565b60009392505050565b506000905600a165627a7a723058200b56d1eb8200c0477cab187abe1c8fc47358a346e9f14fdcd67411bd950601ac00296060604052341561000f57600080fd5b6101c78061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a7230582065dc94686066afea68a03126fd232acc7ec08f1dc64cf54c8e88cb8b19baecf00029",
-  "deployedBytecode": "0x60606040526004361061005e5763ffffffff60e060020a60003504166350930ca5811461006357806356b2c5bb146100785780636573ee1e1461008b578063afa03ac91461009e578063b19faed8146100b1578063d7228bb5146100c4575b600080fd5b341561006e57600080fd5b6100766100d7565b005b341561008357600080fd5b6100766100fa565b341561009657600080fd5b610076610118565b34156100a957600080fd5b610076610138565b34156100bc57600080fd5b610076610158565b34156100cf57600080fd5b610076610176565b600080546100f891600160a060020a0390911690808063ffffffff61019516565b565b6001546100f890600160a060020a031660008063ffffffff61022816565b600080546100f891600160a060020a03909116908063ffffffff6102ad16565b600080546100f891600160a060020a03909116908063ffffffff61022816565b6001546100f890600160a060020a031660008063ffffffff6102ad16565b6001546100f890600160a060020a03166000808063ffffffff61019516565b83600160a060020a03166323b872dd84848460006040516020015260405160e060020a63ffffffff8616028152600160a060020a0393841660048201529190921660248201526044810191909152606401602060405180830381600087803b15156101ff57600080fd5b6102c65a03f1151561021057600080fd5b50505060405180519050151561022257fe5b50505050565b82600160a060020a031663a9059cbb838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd5b6102c65a03f1151561029657600080fd5b5050506040518051905015156102a857fe5b505050565b82600160a060020a031663095ea7b3838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd00a165627a7a72305820e6af30283e5c9e44efe8f6b1369e5b2de942fed0286cc53fb7db8b9682f90cd20029",
+  "bytecode": "0x6060604052341561000f57600080fd5b610017610090565b604051809103906000f080151561002d57600080fd5b60008054600160a060020a031916600160a060020a03929092169190911790556100556100a0565b604051809103906000f080151561006b57600080fd5b60018054600160a060020a031916600160a060020a03929092169190911790556100b0565b6040516101d9806103f583390190565b6040516101e5806105ce83390190565b610336806100bf6000396000f30060606040526004361061005e5763ffffffff60e060020a60003504166350930ca5811461006357806356b2c5bb146100785780636573ee1e1461008b578063afa03ac91461009e578063b19faed8146100b1578063d7228bb5146100c4575b600080fd5b341561006e57600080fd5b6100766100d7565b005b341561008357600080fd5b6100766100fa565b341561009657600080fd5b610076610118565b34156100a957600080fd5b610076610138565b34156100bc57600080fd5b610076610158565b34156100cf57600080fd5b610076610176565b600080546100f891600160a060020a0390911690808063ffffffff61019516565b565b6001546100f890600160a060020a031660008063ffffffff61022816565b600080546100f891600160a060020a03909116908063ffffffff6102ad16565b600080546100f891600160a060020a03909116908063ffffffff61022816565b6001546100f890600160a060020a031660008063ffffffff6102ad16565b6001546100f890600160a060020a03166000808063ffffffff61019516565b83600160a060020a03166323b872dd84848460006040516020015260405160e060020a63ffffffff8616028152600160a060020a0393841660048201529190921660248201526044810191909152606401602060405180830381600087803b15156101ff57600080fd5b6102c65a03f1151561021057600080fd5b50505060405180519050151561022257fe5b50505050565b82600160a060020a031663a9059cbb838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd5b6102c65a03f1151561029657600080fd5b5050506040518051905015156102a857fe5b505050565b82600160a060020a031663095ea7b3838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd00a165627a7a723058205e2a8166fa5b0d460cb342b6b1e4d16414b3b03d3ce9a1d22df28261b644fe2700296060604052341561000f57600080fd5b6101bb8061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610173565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017b565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610180565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043516610189565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff600435811690602435165b600092915050565b600090565b60009392505050565b506000905600a165627a7a72305820302a6093aff8227352d61416b0b49ceb173aa12cc6f2fc65e4432bca28345d5a00296060604052341561000f57600080fd5b6101c78061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a723058206662db2699c44f015045598d56834ededa10fa22f563542dcb9c10f98259dff30029",
+  "deployedBytecode": "0x60606040526004361061005e5763ffffffff60e060020a60003504166350930ca5811461006357806356b2c5bb146100785780636573ee1e1461008b578063afa03ac91461009e578063b19faed8146100b1578063d7228bb5146100c4575b600080fd5b341561006e57600080fd5b6100766100d7565b005b341561008357600080fd5b6100766100fa565b341561009657600080fd5b610076610118565b34156100a957600080fd5b610076610138565b34156100bc57600080fd5b610076610158565b34156100cf57600080fd5b610076610176565b600080546100f891600160a060020a0390911690808063ffffffff61019516565b565b6001546100f890600160a060020a031660008063ffffffff61022816565b600080546100f891600160a060020a03909116908063ffffffff6102ad16565b600080546100f891600160a060020a03909116908063ffffffff61022816565b6001546100f890600160a060020a031660008063ffffffff6102ad16565b6001546100f890600160a060020a03166000808063ffffffff61019516565b83600160a060020a03166323b872dd84848460006040516020015260405160e060020a63ffffffff8616028152600160a060020a0393841660048201529190921660248201526044810191909152606401602060405180830381600087803b15156101ff57600080fd5b6102c65a03f1151561021057600080fd5b50505060405180519050151561022257fe5b50505050565b82600160a060020a031663a9059cbb838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd5b6102c65a03f1151561029657600080fd5b5050506040518051905015156102a857fe5b505050565b82600160a060020a031663095ea7b3838360006040516020015260405160e060020a63ffffffff8516028152600160a060020a0390921660048301526024820152604401602060405180830381600087803b151561028557600080fd00a165627a7a723058205e2a8166fa5b0d460cb342b6b1e4d16414b3b03d3ce9a1d22df28261b644fe270029",
   "sourceMap": "1278:718:3:-;;;1375:121;;;;;;;;1425:22;;:::i;:::-;;;;;;;;;;;;;;;;;;1415:7;:32;;-1:-1:-1;;;;;;1415:32:3;-1:-1:-1;;;;;1415:32:3;;;;;;;;;;1466:25;;:::i;:::-;;;;;;;;;;;;;;;;;;1453:10;:38;;-1:-1:-1;;;;;;1453:38:3;-1:-1:-1;;;;;1453:38:3;;;;;;;;;;1278:718;;;;;;;;;;;;:::o;:::-;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "1278:718:3:-;;;;;;;;;-1:-1:-1;;;1278:718:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1577:84;;;;;;;;;;;;;;1740:79;;;;;;;;;;;;1665:71;;;;;;;;;;;;1500:73;;;;;;;;;;;;1917:77;;;;;;;;;;;;1823:90;;;;;;;;;;;;1577:84;1648:1;1623:7;;:33;;-1:-1:-1;;;;;1623:7:3;;;;1648:1;;1623:33;:24;:33;:::i;:::-;1577:84::o;1740:79::-;1785:10;;:29;;-1:-1:-1;;;;;1785:10:3;1809:1;;1785:29;:23;:29;:::i;1665:71::-;1726:1;1706:7;;:25;;-1:-1:-1;;;;;1706:7:3;;;;1726:1;1706:25;:19;:25;:::i;1500:73::-;1563:1;1542:7;;:26;;-1:-1:-1;;;;;1542:7:3;;;;1563:1;1542:26;:20;:26;:::i;1917:77::-;1961:10;;:28;;-1:-1:-1;;;;;1961:10:3;1984:1;;1961:28;:22;:28;:::i;1823:90::-;1872:10;;:36;;-1:-1:-1;;;;;1872:10:3;1900:1;;;1872:36;:27;:36;:::i;492:143:22:-;594:5;-1:-1:-1;;;;;594:18:22;;613:4;619:2;623:5;594:35;;;;;;;;-1:-1:-1;;;594:35:22;;;;;;-1:-1:-1;;;;;594:35:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;587:43;;;;;;492:143;;;;:::o;368:120::-;457:5;-1:-1:-1;;;;;457:14:22;;472:2;476:5;457:25;;;;;;;;-1:-1:-1;;;457:25:22;;;;;;-1:-1:-1;;;;;457:25:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;450:33;;;;;;368:120;;;:::o;639:123::-;727:5;-1:-1:-1;;;;;727:13:22;;741:7;750:5;727:29;;;;;;;;-1:-1:-1;;;727:29:22;;;;;;-1:-1:-1;;;;;727:29:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "1278:718:3:-;;;;;;;;;-1:-1:-1;;;1278:718:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1577:84;;;;;;;;;;;;;;1740:79;;;;;;;;;;;;1665:71;;;;;;;;;;;;1500:73;;;;;;;;;;;;1917:77;;;;;;;;;;;;1823:90;;;;;;;;;;;;1577:84;1648:1;1623:7;;:33;;-1:-1:-1;;;;;1623:7:3;;;;1648:1;;1623:33;:24;:33;:::i;:::-;1577:84::o;1740:79::-;1785:10;;:29;;-1:-1:-1;;;;;1785:10:3;1809:1;;1785:29;:23;:29;:::i;1665:71::-;1726:1;1706:7;;:25;;-1:-1:-1;;;;;1706:7:3;;;;1726:1;1706:25;:19;:25;:::i;1500:73::-;1563:1;1542:7;;:26;;-1:-1:-1;;;;;1542:7:3;;;;1563:1;1542:26;:20;:26;:::i;1917:77::-;1961:10;;:28;;-1:-1:-1;;;;;1961:10:3;1984:1;;1961:28;:22;:28;:::i;1823:90::-;1872:10;;:36;;-1:-1:-1;;;;;1872:10:3;1900:1;;;1872:36;:27;:36;:::i;492:143:24:-;594:5;-1:-1:-1;;;;;594:18:24;;613:4;619:2;623:5;594:35;;;;;;;;-1:-1:-1;;;594:35:24;;;;;;-1:-1:-1;;;;;594:35:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;587:43;;;;;;492:143;;;;:::o;368:120::-;457:5;-1:-1:-1;;;;;457:14:24;;472:2;476:5;457:25;;;;;;;;-1:-1:-1;;;457:25:24;;;;;;-1:-1:-1;;;;;457:25:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;450:33;;;;;;368:120;;;:::o;639:123::-;727:5;-1:-1:-1;;;;;727:13:24;;741:7;750:5;727:29;;;;;;;;-1:-1:-1;;;727:29:24;;;;;;-1:-1:-1;;;;;727:29:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
   "source": "pragma solidity ^0.4.18;\n\nimport \"zeppelin-solidity/contracts/token/ERC20/ERC20.sol\";\nimport \"zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol\";\n\n\ncontract ERC20FailingMock is ERC20 {\n  function totalSupply() public view returns (uint256) {\n    return 0;\n  }\n\n  function transfer(address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function transferFrom(address, address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function approve(address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function balanceOf(address) public constant returns (uint256) {\n    return 0;\n  }\n\n  function allowance(address, address) public constant returns (uint256) {\n    return 0;\n  }\n}\n\n\ncontract ERC20SucceedingMock is ERC20 {\n  function totalSupply() public view returns (uint256) {\n    return 0;\n  }\n  \n  function transfer(address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function transferFrom(address, address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function approve(address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function balanceOf(address) public constant returns (uint256) {\n    return 0;\n  }\n\n  function allowance(address, address) public constant returns (uint256) {\n    return 0;\n  }\n}\n\n\ncontract SafeERC20Helper {\n  using SafeERC20 for ERC20;\n\n  ERC20 failing;\n  ERC20 succeeding;\n\n  function SafeERC20Helper() public {\n    failing = new ERC20FailingMock();\n    succeeding = new ERC20SucceedingMock();\n  }\n\n  function doFailingTransfer() public {\n    failing.safeTransfer(0, 0);\n  }\n\n  function doFailingTransferFrom() public {\n    failing.safeTransferFrom(0, 0, 0);\n  }\n\n  function doFailingApprove() public {\n    failing.safeApprove(0, 0);\n  }\n\n  function doSucceedingTransfer() public {\n    succeeding.safeTransfer(0, 0);\n  }\n\n  function doSucceedingTransferFrom() public {\n    succeeding.safeTransferFrom(0, 0, 0);\n  }\n\n  function doSucceedingApprove() public {\n    succeeding.safeApprove(0, 0);\n  }\n}\n",
-  "sourcePath": "/home/cheshta/Documents/projects-nodejs/crowdsale_v1.1/contracts/SafeERC20Helper.sol",
+  "sourcePath": "/home/cheshta/Desktop/smartcontract/contracts/SafeERC20Helper.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/home/cheshta/Documents/projects-nodejs/crowdsale_v1.1/contracts/SafeERC20Helper.sol",
+      "absolutePath": "/home/cheshta/Desktop/smartcontract/contracts/SafeERC20Helper.sol",
       "exportedSymbols": {
         "ERC20FailingMock": [
           179
@@ -99,7 +99,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 7563,
+          "SourceUnit": 7657,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/ERC20.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/ERC20.sol",
           "scope": 343,
@@ -114,7 +114,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 7657,
+          "SourceUnit": 7853,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
           "scope": 343,
@@ -130,16 +130,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            7562,
-            7594
+            7656,
+            7688
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             179,
-            7562,
-            7594
+            7656,
+            7688
           ],
           "name": "ERC20FailingMock",
           "scope": 343
@@ -156,7 +156,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 109,
@@ -180,7 +180,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7569,
+              "superFunction": 7663,
               "visibility": "public"
             },
             "children": [
@@ -279,7 +279,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7585,
+              "superFunction": 7679,
               "visibility": "public"
             },
             "children": [
@@ -426,7 +426,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7544,
+              "superFunction": 7638,
               "visibility": "public"
             },
             "children": [
@@ -599,7 +599,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7553,
+              "superFunction": 7647,
               "visibility": "public"
             },
             "children": [
@@ -746,7 +746,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7576,
+              "superFunction": 7670,
               "visibility": "public"
             },
             "children": [
@@ -867,7 +867,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7533,
+              "superFunction": 7627,
               "visibility": "public"
             },
             "children": [
@@ -1010,16 +1010,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            7562,
-            7594
+            7656,
+            7688
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             250,
-            7562,
-            7594
+            7656,
+            7688
           ],
           "name": "ERC20SucceedingMock",
           "scope": 343
@@ -1036,7 +1036,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 180,
@@ -1060,7 +1060,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7569,
+              "superFunction": 7663,
               "visibility": "public"
             },
             "children": [
@@ -1159,7 +1159,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7585,
+              "superFunction": 7679,
               "visibility": "public"
             },
             "children": [
@@ -1306,7 +1306,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7544,
+              "superFunction": 7638,
               "visibility": "public"
             },
             "children": [
@@ -1479,7 +1479,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7553,
+              "superFunction": 7647,
               "visibility": "public"
             },
             "children": [
@@ -1626,7 +1626,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7576,
+              "superFunction": 7670,
               "visibility": "public"
             },
             "children": [
@@ -1747,7 +1747,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7533,
+              "superFunction": 7627,
               "visibility": "public"
             },
             "children": [
@@ -1912,7 +1912,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeERC20",
-                  "referencedDeclaration": 7656,
+                  "referencedDeclaration": 7852,
                   "type": "library SafeERC20"
                 },
                 "id": 251,
@@ -1923,7 +1923,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 252,
@@ -1951,7 +1951,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 254,
@@ -1979,7 +1979,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 256,
@@ -2291,7 +2291,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransfer",
-                              "referencedDeclaration": 7616,
+                              "referencedDeclaration": 7812,
                               "type": "function (contract ERC20Basic,address,uint256)"
                             },
                             "children": [
@@ -2446,7 +2446,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransferFrom",
-                              "referencedDeclaration": 7637,
+                              "referencedDeclaration": 7833,
                               "type": "function (contract ERC20,address,address,uint256)"
                             },
                             "children": [
@@ -2614,7 +2614,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeApprove",
-                              "referencedDeclaration": 7655,
+                              "referencedDeclaration": 7851,
                               "type": "function (contract ERC20,address,uint256)"
                             },
                             "children": [
@@ -2765,7 +2765,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransfer",
-                              "referencedDeclaration": 7616,
+                              "referencedDeclaration": 7812,
                               "type": "function (contract ERC20Basic,address,uint256)"
                             },
                             "children": [
@@ -2920,7 +2920,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransferFrom",
-                              "referencedDeclaration": 7637,
+                              "referencedDeclaration": 7833,
                               "type": "function (contract ERC20,address,address,uint256)"
                             },
                             "children": [
@@ -3088,7 +3088,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeApprove",
-                              "referencedDeclaration": 7655,
+                              "referencedDeclaration": 7851,
                               "type": "function (contract ERC20,address,uint256)"
                             },
                             "children": [
@@ -3181,5 +3181,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-05-15T10:21:12.905Z"
+  "updatedAt": "2018-07-20T10:46:37.510Z"
 }

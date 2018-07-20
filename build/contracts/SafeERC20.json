@@ -3,8 +3,8 @@
   "abi": [],
   "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a72305820cf7d2c0c94502fbd26c9ea1be5e18b371b19f1ab698833d831c2f957cc1e88b60029",
   "deployedBytecode": "0x6060604052600080fd00a165627a7a72305820cf7d2c0c94502fbd26c9ea1be5e18b371b19f1ab698833d831c2f957cc1e88b60029",
-  "sourceMap": "346:418:22:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "346:418:22:-;;;;;",
+  "sourceMap": "346:418:24:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "346:418:24:-;;;;;",
   "source": "pragma solidity ^0.4.18;\n\nimport \"./ERC20Basic.sol\";\nimport \"./ERC20.sol\";\n\n\n/**\n * @title SafeERC20\n * @dev Wrappers around ERC20 operations that throw on failure.\n * To use this library you can add a `using SafeERC20 for ERC20;` statement to your contract,\n * which allows you to call the safe operations as `token.safeTransfer(...)`, etc.\n */\nlibrary SafeERC20 {\n  function safeTransfer(ERC20Basic token, address to, uint256 value) internal {\n    assert(token.transfer(to, value));\n  }\n\n  function safeTransferFrom(ERC20 token, address from, address to, uint256 value) internal {\n    assert(token.transferFrom(from, to, value));\n  }\n\n  function safeApprove(ERC20 token, address spender, uint256 value) internal {\n    assert(token.approve(spender, value));\n  }\n}\n",
   "sourcePath": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
   "ast": {
@@ -12,7 +12,7 @@
       "absolutePath": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
       "exportedSymbols": {
         "SafeERC20": [
-          7656
+          7852
         ]
       }
     },
@@ -26,39 +26,39 @@
             ".18"
           ]
         },
-        "id": 7596,
+        "id": 7792,
         "name": "PragmaDirective",
-        "src": "0:24:22"
+        "src": "0:24:24"
       },
       {
         "attributes": {
-          "SourceUnit": 7595,
+          "SourceUnit": 7689,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol",
           "file": "./ERC20Basic.sol",
-          "scope": 7657,
+          "scope": 7853,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7597,
+        "id": 7793,
         "name": "ImportDirective",
-        "src": "26:26:22"
+        "src": "26:26:24"
       },
       {
         "attributes": {
-          "SourceUnit": 7563,
+          "SourceUnit": 7657,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/ERC20.sol",
           "file": "./ERC20.sol",
-          "scope": 7657,
+          "scope": 7853,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 7598,
+        "id": 7794,
         "name": "ImportDirective",
-        "src": "53:21:22"
+        "src": "53:21:24"
       },
       {
         "attributes": {
@@ -72,10 +72,10 @@
           "documentation": "@title SafeERC20\n@dev Wrappers around ERC20 operations that throw on failure.\nTo use this library you can add a `using SafeERC20 for ERC20;` statement to your contract,\nwhich allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            7656
+            7852
           ],
           "name": "SafeERC20",
-          "scope": 7657
+          "scope": 7853
         },
         "children": [
           {
@@ -88,7 +88,7 @@
               ],
               "name": "safeTransfer",
               "payable": false,
-              "scope": 7656,
+              "scope": 7852,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "internal"
@@ -100,7 +100,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "token",
-                      "scope": 7616,
+                      "scope": 7812,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract ERC20Basic",
@@ -112,23 +112,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ERC20Basic",
-                          "referencedDeclaration": 7594,
+                          "referencedDeclaration": 7688,
                           "type": "contract ERC20Basic"
                         },
-                        "id": 7599,
+                        "id": 7795,
                         "name": "UserDefinedTypeName",
-                        "src": "390:10:22"
+                        "src": "390:10:24"
                       }
                     ],
-                    "id": 7600,
+                    "id": 7796,
                     "name": "VariableDeclaration",
-                    "src": "390:16:22"
+                    "src": "390:16:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "to",
-                      "scope": 7616,
+                      "scope": 7812,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -141,20 +141,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7601,
+                        "id": 7797,
                         "name": "ElementaryTypeName",
-                        "src": "408:7:22"
+                        "src": "408:7:24"
                       }
                     ],
-                    "id": 7602,
+                    "id": 7798,
                     "name": "VariableDeclaration",
-                    "src": "408:10:22"
+                    "src": "408:10:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "value",
-                      "scope": 7616,
+                      "scope": 7812,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -167,19 +167,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7603,
+                        "id": 7799,
                         "name": "ElementaryTypeName",
-                        "src": "420:7:22"
+                        "src": "420:7:24"
                       }
                     ],
-                    "id": 7604,
+                    "id": 7800,
                     "name": "VariableDeclaration",
-                    "src": "420:13:22"
+                    "src": "420:13:24"
                   }
                 ],
-                "id": 7605,
+                "id": 7801,
                 "name": "ParameterList",
-                "src": "389:45:22"
+                "src": "389:45:24"
               },
               {
                 "attributes": {
@@ -188,9 +188,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7606,
+                "id": 7802,
                 "name": "ParameterList",
-                "src": "444:0:22"
+                "src": "444:0:24"
               },
               {
                 "children": [
@@ -222,13 +222,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7964,
+                              "referencedDeclaration": 8160,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
-                            "id": 7607,
+                            "id": 7803,
                             "name": "Identifier",
-                            "src": "450:6:22"
+                            "src": "450:6:24"
                           },
                           {
                             "attributes": {
@@ -262,7 +262,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "transfer",
-                                  "referencedDeclaration": 7585,
+                                  "referencedDeclaration": 7679,
                                   "type": "function (address,uint256) external returns (bool)"
                                 },
                                 "children": [
@@ -272,18 +272,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7600,
+                                      "referencedDeclaration": 7796,
                                       "type": "contract ERC20Basic",
                                       "value": "token"
                                     },
-                                    "id": 7608,
+                                    "id": 7804,
                                     "name": "Identifier",
-                                    "src": "457:5:22"
+                                    "src": "457:5:24"
                                   }
                                 ],
-                                "id": 7609,
+                                "id": 7805,
                                 "name": "MemberAccess",
-                                "src": "457:14:22"
+                                "src": "457:14:24"
                               },
                               {
                                 "attributes": {
@@ -291,13 +291,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7602,
+                                  "referencedDeclaration": 7798,
                                   "type": "address",
                                   "value": "to"
                                 },
-                                "id": 7610,
+                                "id": 7806,
                                 "name": "Identifier",
-                                "src": "472:2:22"
+                                "src": "472:2:24"
                               },
                               {
                                 "attributes": {
@@ -305,38 +305,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7604,
+                                  "referencedDeclaration": 7800,
                                   "type": "uint256",
                                   "value": "value"
                                 },
-                                "id": 7611,
+                                "id": 7807,
                                 "name": "Identifier",
-                                "src": "476:5:22"
+                                "src": "476:5:24"
                               }
                             ],
-                            "id": 7612,
+                            "id": 7808,
                             "name": "FunctionCall",
-                            "src": "457:25:22"
+                            "src": "457:25:24"
                           }
                         ],
-                        "id": 7613,
+                        "id": 7809,
                         "name": "FunctionCall",
-                        "src": "450:33:22"
+                        "src": "450:33:24"
                       }
                     ],
-                    "id": 7614,
+                    "id": 7810,
                     "name": "ExpressionStatement",
-                    "src": "450:33:22"
+                    "src": "450:33:24"
                   }
                 ],
-                "id": 7615,
+                "id": 7811,
                 "name": "Block",
-                "src": "444:44:22"
+                "src": "444:44:24"
               }
             ],
-            "id": 7616,
+            "id": 7812,
             "name": "FunctionDefinition",
-            "src": "368:120:22"
+            "src": "368:120:24"
           },
           {
             "attributes": {
@@ -348,7 +348,7 @@
               ],
               "name": "safeTransferFrom",
               "payable": false,
-              "scope": 7656,
+              "scope": 7852,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "internal"
@@ -360,7 +360,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "token",
-                      "scope": 7637,
+                      "scope": 7833,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract ERC20",
@@ -372,23 +372,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ERC20",
-                          "referencedDeclaration": 7562,
+                          "referencedDeclaration": 7656,
                           "type": "contract ERC20"
                         },
-                        "id": 7617,
+                        "id": 7813,
                         "name": "UserDefinedTypeName",
-                        "src": "518:5:22"
+                        "src": "518:5:24"
                       }
                     ],
-                    "id": 7618,
+                    "id": 7814,
                     "name": "VariableDeclaration",
-                    "src": "518:11:22"
+                    "src": "518:11:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "from",
-                      "scope": 7637,
+                      "scope": 7833,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -401,20 +401,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7619,
+                        "id": 7815,
                         "name": "ElementaryTypeName",
-                        "src": "531:7:22"
+                        "src": "531:7:24"
                       }
                     ],
-                    "id": 7620,
+                    "id": 7816,
                     "name": "VariableDeclaration",
-                    "src": "531:12:22"
+                    "src": "531:12:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "to",
-                      "scope": 7637,
+                      "scope": 7833,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -427,20 +427,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7621,
+                        "id": 7817,
                         "name": "ElementaryTypeName",
-                        "src": "545:7:22"
+                        "src": "545:7:24"
                       }
                     ],
-                    "id": 7622,
+                    "id": 7818,
                     "name": "VariableDeclaration",
-                    "src": "545:10:22"
+                    "src": "545:10:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "value",
-                      "scope": 7637,
+                      "scope": 7833,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -453,19 +453,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7623,
+                        "id": 7819,
                         "name": "ElementaryTypeName",
-                        "src": "557:7:22"
+                        "src": "557:7:24"
                       }
                     ],
-                    "id": 7624,
+                    "id": 7820,
                     "name": "VariableDeclaration",
-                    "src": "557:13:22"
+                    "src": "557:13:24"
                   }
                 ],
-                "id": 7625,
+                "id": 7821,
                 "name": "ParameterList",
-                "src": "517:54:22"
+                "src": "517:54:24"
               },
               {
                 "attributes": {
@@ -474,9 +474,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7626,
+                "id": 7822,
                 "name": "ParameterList",
-                "src": "581:0:22"
+                "src": "581:0:24"
               },
               {
                 "children": [
@@ -508,13 +508,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7964,
+                              "referencedDeclaration": 8160,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
-                            "id": 7627,
+                            "id": 7823,
                             "name": "Identifier",
-                            "src": "587:6:22"
+                            "src": "587:6:24"
                           },
                           {
                             "attributes": {
@@ -552,7 +552,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "transferFrom",
-                                  "referencedDeclaration": 7544,
+                                  "referencedDeclaration": 7638,
                                   "type": "function (address,address,uint256) external returns (bool)"
                                 },
                                 "children": [
@@ -562,18 +562,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7618,
+                                      "referencedDeclaration": 7814,
                                       "type": "contract ERC20",
                                       "value": "token"
                                     },
-                                    "id": 7628,
+                                    "id": 7824,
                                     "name": "Identifier",
-                                    "src": "594:5:22"
+                                    "src": "594:5:24"
                                   }
                                 ],
-                                "id": 7629,
+                                "id": 7825,
                                 "name": "MemberAccess",
-                                "src": "594:18:22"
+                                "src": "594:18:24"
                               },
                               {
                                 "attributes": {
@@ -581,13 +581,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7620,
+                                  "referencedDeclaration": 7816,
                                   "type": "address",
                                   "value": "from"
                                 },
-                                "id": 7630,
+                                "id": 7826,
                                 "name": "Identifier",
-                                "src": "613:4:22"
+                                "src": "613:4:24"
                               },
                               {
                                 "attributes": {
@@ -595,13 +595,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7622,
+                                  "referencedDeclaration": 7818,
                                   "type": "address",
                                   "value": "to"
                                 },
-                                "id": 7631,
+                                "id": 7827,
                                 "name": "Identifier",
-                                "src": "619:2:22"
+                                "src": "619:2:24"
                               },
                               {
                                 "attributes": {
@@ -609,38 +609,38 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7624,
+                                  "referencedDeclaration": 7820,
                                   "type": "uint256",
                                   "value": "value"
                                 },
-                                "id": 7632,
+                                "id": 7828,
                                 "name": "Identifier",
-                                "src": "623:5:22"
+                                "src": "623:5:24"
                               }
                             ],
-                            "id": 7633,
+                            "id": 7829,
                             "name": "FunctionCall",
-                            "src": "594:35:22"
+                            "src": "594:35:24"
                           }
                         ],
-                        "id": 7634,
+                        "id": 7830,
                         "name": "FunctionCall",
-                        "src": "587:43:22"
+                        "src": "587:43:24"
                       }
                     ],
-                    "id": 7635,
+                    "id": 7831,
                     "name": "ExpressionStatement",
-                    "src": "587:43:22"
+                    "src": "587:43:24"
                   }
                 ],
-                "id": 7636,
+                "id": 7832,
                 "name": "Block",
-                "src": "581:54:22"
+                "src": "581:54:24"
               }
             ],
-            "id": 7637,
+            "id": 7833,
             "name": "FunctionDefinition",
-            "src": "492:143:22"
+            "src": "492:143:24"
           },
           {
             "attributes": {
@@ -652,7 +652,7 @@
               ],
               "name": "safeApprove",
               "payable": false,
-              "scope": 7656,
+              "scope": 7852,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "internal"
@@ -664,7 +664,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "token",
-                      "scope": 7655,
+                      "scope": 7851,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract ERC20",
@@ -676,23 +676,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ERC20",
-                          "referencedDeclaration": 7562,
+                          "referencedDeclaration": 7656,
                           "type": "contract ERC20"
                         },
-                        "id": 7638,
+                        "id": 7834,
                         "name": "UserDefinedTypeName",
-                        "src": "660:5:22"
+                        "src": "660:5:24"
                       }
                     ],
-                    "id": 7639,
+                    "id": 7835,
                     "name": "VariableDeclaration",
-                    "src": "660:11:22"
+                    "src": "660:11:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "spender",
-                      "scope": 7655,
+                      "scope": 7851,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -705,20 +705,20 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 7640,
+                        "id": 7836,
                         "name": "ElementaryTypeName",
-                        "src": "673:7:22"
+                        "src": "673:7:24"
                       }
                     ],
-                    "id": 7641,
+                    "id": 7837,
                     "name": "VariableDeclaration",
-                    "src": "673:15:22"
+                    "src": "673:15:24"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "value",
-                      "scope": 7655,
+                      "scope": 7851,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -731,19 +731,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 7642,
+                        "id": 7838,
                         "name": "ElementaryTypeName",
-                        "src": "690:7:22"
+                        "src": "690:7:24"
                       }
                     ],
-                    "id": 7643,
+                    "id": 7839,
                     "name": "VariableDeclaration",
-                    "src": "690:13:22"
+                    "src": "690:13:24"
                   }
                 ],
-                "id": 7644,
+                "id": 7840,
                 "name": "ParameterList",
-                "src": "659:45:22"
+                "src": "659:45:24"
               },
               {
                 "attributes": {
@@ -752,9 +752,9 @@
                   ]
                 },
                 "children": [],
-                "id": 7645,
+                "id": 7841,
                 "name": "ParameterList",
-                "src": "714:0:22"
+                "src": "714:0:24"
               },
               {
                 "children": [
@@ -786,13 +786,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 7964,
+                              "referencedDeclaration": 8160,
                               "type": "function (bool) pure",
                               "value": "assert"
                             },
-                            "id": 7646,
+                            "id": 7842,
                             "name": "Identifier",
-                            "src": "720:6:22"
+                            "src": "720:6:24"
                           },
                           {
                             "attributes": {
@@ -826,7 +826,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "approve",
-                                  "referencedDeclaration": 7553,
+                                  "referencedDeclaration": 7647,
                                   "type": "function (address,uint256) external returns (bool)"
                                 },
                                 "children": [
@@ -836,18 +836,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 7639,
+                                      "referencedDeclaration": 7835,
                                       "type": "contract ERC20",
                                       "value": "token"
                                     },
-                                    "id": 7647,
+                                    "id": 7843,
                                     "name": "Identifier",
-                                    "src": "727:5:22"
+                                    "src": "727:5:24"
                                   }
                                 ],
-                                "id": 7648,
+                                "id": 7844,
                                 "name": "MemberAccess",
-                                "src": "727:13:22"
+                                "src": "727:13:24"
                               },
                               {
                                 "attributes": {
@@ -855,13 +855,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7641,
+                                  "referencedDeclaration": 7837,
                                   "type": "address",
                                   "value": "spender"
                                 },
-                                "id": 7649,
+                                "id": 7845,
                                 "name": "Identifier",
-                                "src": "741:7:22"
+                                "src": "741:7:24"
                               },
                               {
                                 "attributes": {
@@ -869,48 +869,48 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 7643,
+                                  "referencedDeclaration": 7839,
                                   "type": "uint256",
                                   "value": "value"
                                 },
-                                "id": 7650,
+                                "id": 7846,
                                 "name": "Identifier",
-                                "src": "750:5:22"
+                                "src": "750:5:24"
                               }
                             ],
-                            "id": 7651,
+                            "id": 7847,
                             "name": "FunctionCall",
-                            "src": "727:29:22"
+                            "src": "727:29:24"
                           }
                         ],
-                        "id": 7652,
+                        "id": 7848,
                         "name": "FunctionCall",
-                        "src": "720:37:22"
+                        "src": "720:37:24"
                       }
                     ],
-                    "id": 7653,
+                    "id": 7849,
                     "name": "ExpressionStatement",
-                    "src": "720:37:22"
+                    "src": "720:37:24"
                   }
                 ],
-                "id": 7654,
+                "id": 7850,
                 "name": "Block",
-                "src": "714:48:22"
+                "src": "714:48:24"
               }
             ],
-            "id": 7655,
+            "id": 7851,
             "name": "FunctionDefinition",
-            "src": "639:123:22"
+            "src": "639:123:24"
           }
         ],
-        "id": 7656,
+        "id": 7852,
         "name": "ContractDefinition",
-        "src": "346:418:22"
+        "src": "346:418:24"
       }
     ],
-    "id": 7657,
+    "id": 7853,
     "name": "SourceUnit",
-    "src": "0:765:22"
+    "src": "0:765:24"
   },
   "compiler": {
     "name": "solc",
@@ -918,5 +918,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-05-15T10:21:13.148Z"
+  "updatedAt": "2018-07-20T10:46:37.741Z"
 }

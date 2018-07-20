@@ -175,15 +175,15 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6101c78061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a7230582065dc94686066afea68a03126fd232acc7ec08f1dc64cf54c8e88cb8b19baecf00029",
-  "deployedBytecode": "0x6060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a7230582065dc94686066afea68a03126fd232acc7ec08f1dc64cf54c8e88cb8b19baecf00029",
+  "bytecode": "0x6060604052341561000f57600080fd5b6101c78061001e6000396000f3006060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a723058206662db2699c44f015045598d56834ededa10fa22f563542dcb9c10f98259dff30029",
+  "deployedBytecode": "0x6060604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663095ea7b3811461007c57806318160ddd146100bf57806323b872dd146100e457806370a0823114610119578063a9059cbb1461007c578063dd62ed3e14610145575b600080fd5b341561008757600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043516602435610177565b604051901515815260200160405180910390f35b34156100ca57600080fd5b6100d261017f565b60405190815260200160405180910390f35b34156100ef57600080fd5b6100ab73ffffffffffffffffffffffffffffffffffffffff60043581169060243516604435610184565b341561012457600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff6004351661018d565b341561015057600080fd5b6100d273ffffffffffffffffffffffffffffffffffffffff60043581169060243516610193565b600192915050565b600090565b60019392505050565b50600090565b6000929150505600a165627a7a723058206662db2699c44f015045598d56834ededa10fa22f563542dcb9c10f98259dff30029",
   "sourceMap": "714:561:3:-;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "714:561:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1015:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;756:72;;;;;;;;;;;;;;;;;;;;;;;;;;;918:93;;;;;;;;;;;;;;;;;;;;;;;1098:81;;;;;;;;;;;;;;;;1183:90;;;;;;;;;;;;;;;;;;;;;1015:79;1085:4;1015:79;;;;:::o;756:72::-;800:7;756:72;:::o;918:93::-;1002:4;918:93;;;;;:::o;1098:81::-;-1:-1:-1;1151:7:3;;1098:81::o;1183:90::-;1245:7;1183:90;;;;:::o",
   "source": "pragma solidity ^0.4.18;\n\nimport \"zeppelin-solidity/contracts/token/ERC20/ERC20.sol\";\nimport \"zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol\";\n\n\ncontract ERC20FailingMock is ERC20 {\n  function totalSupply() public view returns (uint256) {\n    return 0;\n  }\n\n  function transfer(address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function transferFrom(address, address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function approve(address, uint256) public returns (bool) {\n    return false;\n  }\n\n  function balanceOf(address) public constant returns (uint256) {\n    return 0;\n  }\n\n  function allowance(address, address) public constant returns (uint256) {\n    return 0;\n  }\n}\n\n\ncontract ERC20SucceedingMock is ERC20 {\n  function totalSupply() public view returns (uint256) {\n    return 0;\n  }\n  \n  function transfer(address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function transferFrom(address, address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function approve(address, uint256) public returns (bool) {\n    return true;\n  }\n\n  function balanceOf(address) public constant returns (uint256) {\n    return 0;\n  }\n\n  function allowance(address, address) public constant returns (uint256) {\n    return 0;\n  }\n}\n\n\ncontract SafeERC20Helper {\n  using SafeERC20 for ERC20;\n\n  ERC20 failing;\n  ERC20 succeeding;\n\n  function SafeERC20Helper() public {\n    failing = new ERC20FailingMock();\n    succeeding = new ERC20SucceedingMock();\n  }\n\n  function doFailingTransfer() public {\n    failing.safeTransfer(0, 0);\n  }\n\n  function doFailingTransferFrom() public {\n    failing.safeTransferFrom(0, 0, 0);\n  }\n\n  function doFailingApprove() public {\n    failing.safeApprove(0, 0);\n  }\n\n  function doSucceedingTransfer() public {\n    succeeding.safeTransfer(0, 0);\n  }\n\n  function doSucceedingTransferFrom() public {\n    succeeding.safeTransferFrom(0, 0, 0);\n  }\n\n  function doSucceedingApprove() public {\n    succeeding.safeApprove(0, 0);\n  }\n}\n",
-  "sourcePath": "/home/cheshta/Documents/projects-nodejs/crowdsale_v1.1/contracts/SafeERC20Helper.sol",
+  "sourcePath": "/home/cheshta/Desktop/smartcontract/contracts/SafeERC20Helper.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/home/cheshta/Documents/projects-nodejs/crowdsale_v1.1/contracts/SafeERC20Helper.sol",
+      "absolutePath": "/home/cheshta/Desktop/smartcontract/contracts/SafeERC20Helper.sol",
       "exportedSymbols": {
         "ERC20FailingMock": [
           179
@@ -212,7 +212,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 7563,
+          "SourceUnit": 7657,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/ERC20.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/ERC20.sol",
           "scope": 343,
@@ -227,7 +227,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 7657,
+          "SourceUnit": 7853,
           "absolutePath": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
           "file": "zeppelin-solidity/contracts/token/ERC20/SafeERC20.sol",
           "scope": 343,
@@ -243,16 +243,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            7562,
-            7594
+            7656,
+            7688
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             179,
-            7562,
-            7594
+            7656,
+            7688
           ],
           "name": "ERC20FailingMock",
           "scope": 343
@@ -269,7 +269,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 109,
@@ -293,7 +293,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7569,
+              "superFunction": 7663,
               "visibility": "public"
             },
             "children": [
@@ -392,7 +392,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7585,
+              "superFunction": 7679,
               "visibility": "public"
             },
             "children": [
@@ -539,7 +539,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7544,
+              "superFunction": 7638,
               "visibility": "public"
             },
             "children": [
@@ -712,7 +712,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "nonpayable",
-              "superFunction": 7553,
+              "superFunction": 7647,
               "visibility": "public"
             },
             "children": [
@@ -859,7 +859,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7576,
+              "superFunction": 7670,
               "visibility": "public"
             },
             "children": [
@@ -980,7 +980,7 @@
               "payable": false,
               "scope": 179,
               "stateMutability": "view",
-              "superFunction": 7533,
+              "superFunction": 7627,
               "visibility": "public"
             },
             "children": [
@@ -1123,16 +1123,16 @@
       {
         "attributes": {
           "contractDependencies": [
-            7562,
-            7594
+            7656,
+            7688
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
             250,
-            7562,
-            7594
+            7656,
+            7688
           ],
           "name": "ERC20SucceedingMock",
           "scope": 343
@@ -1149,7 +1149,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 180,
@@ -1173,7 +1173,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7569,
+              "superFunction": 7663,
               "visibility": "public"
             },
             "children": [
@@ -1272,7 +1272,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7585,
+              "superFunction": 7679,
               "visibility": "public"
             },
             "children": [
@@ -1419,7 +1419,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7544,
+              "superFunction": 7638,
               "visibility": "public"
             },
             "children": [
@@ -1592,7 +1592,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "nonpayable",
-              "superFunction": 7553,
+              "superFunction": 7647,
               "visibility": "public"
             },
             "children": [
@@ -1739,7 +1739,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7576,
+              "superFunction": 7670,
               "visibility": "public"
             },
             "children": [
@@ -1860,7 +1860,7 @@
               "payable": false,
               "scope": 250,
               "stateMutability": "view",
-              "superFunction": 7533,
+              "superFunction": 7627,
               "visibility": "public"
             },
             "children": [
@@ -2025,7 +2025,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeERC20",
-                  "referencedDeclaration": 7656,
+                  "referencedDeclaration": 7852,
                   "type": "library SafeERC20"
                 },
                 "id": 251,
@@ -2036,7 +2036,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 252,
@@ -2064,7 +2064,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 254,
@@ -2092,7 +2092,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ERC20",
-                  "referencedDeclaration": 7562,
+                  "referencedDeclaration": 7656,
                   "type": "contract ERC20"
                 },
                 "id": 256,
@@ -2404,7 +2404,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransfer",
-                              "referencedDeclaration": 7616,
+                              "referencedDeclaration": 7812,
                               "type": "function (contract ERC20Basic,address,uint256)"
                             },
                             "children": [
@@ -2559,7 +2559,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransferFrom",
-                              "referencedDeclaration": 7637,
+                              "referencedDeclaration": 7833,
                               "type": "function (contract ERC20,address,address,uint256)"
                             },
                             "children": [
@@ -2727,7 +2727,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeApprove",
-                              "referencedDeclaration": 7655,
+                              "referencedDeclaration": 7851,
                               "type": "function (contract ERC20,address,uint256)"
                             },
                             "children": [
@@ -2878,7 +2878,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransfer",
-                              "referencedDeclaration": 7616,
+                              "referencedDeclaration": 7812,
                               "type": "function (contract ERC20Basic,address,uint256)"
                             },
                             "children": [
@@ -3033,7 +3033,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeTransferFrom",
-                              "referencedDeclaration": 7637,
+                              "referencedDeclaration": 7833,
                               "type": "function (contract ERC20,address,address,uint256)"
                             },
                             "children": [
@@ -3201,7 +3201,7 @@
                               "isPure": false,
                               "lValueRequested": false,
                               "member_name": "safeApprove",
-                              "referencedDeclaration": 7655,
+                              "referencedDeclaration": 7851,
                               "type": "function (contract ERC20,address,uint256)"
                             },
                             "children": [
@@ -3294,5 +3294,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-05-15T10:21:12.903Z"
+  "updatedAt": "2018-07-20T10:46:37.508Z"
 }

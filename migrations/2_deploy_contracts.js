@@ -23,7 +23,7 @@ function ether (n) {
     const RATE = 25; // per token value in cent i.e 1 token = 25 cents
     const goal = ether(1);
     const minTransactionValue = 500; // minimum transaction value in USD i.e 500 USD
-    const value = ether(0.2); // Balance assigned to contract address at the time of deployment
+    const value = ether(1); // Balance assigned to contract address at the time of deployment
     const from = '0x007510BdDAF1144E4C6c29cD4bC3c0af0ea381a8'; // Wallet address from where assignment will take place
     console.log([RATE,goal,accounts[0],minTransactionValue,value]);
     return deployer.deploy(PreIcoCrowdsale,RATE, goal, from, minTransactionValue,{from, value});
