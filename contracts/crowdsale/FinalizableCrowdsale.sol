@@ -2,6 +2,7 @@ pragma solidity ^0.4.18;
 
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
 import "./Crowdsale.sol";
+import "../token/MintableToken.sol";
 
 
 /**
@@ -23,15 +24,13 @@ contract FinalizableCrowdsale is Crowdsale {
   function finalize() onlyOwner public {
     require(!isFinalized);
     require(hasEnded());
-    owner.transfer(this.balance); // transferring left ethers at contract address to owner wallet address
+    owner.transfer(this.balance);
     finalization();
     Finalized();
     isFinalized = true;
     
     
   }
-
- 
 
    
 
@@ -41,6 +40,6 @@ contract FinalizableCrowdsale is Crowdsale {
    * executed entirely.
    */
   function finalization() internal {
-     token.finishMinting();
+    token.finishMinting();
   }
 }

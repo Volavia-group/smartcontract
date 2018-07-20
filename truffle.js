@@ -28,7 +28,7 @@ networks: {
       host: "localhost",
       port: 8545,
       network_id: "42",
-      from: "0x00622AdE667d29A452022333b16641aC7D06CD5a",
+      from: "0x007510BdDAF1144E4C6c29cD4bC3c0af0ea381a8",
       gas: 6900979
     },
     rinkeby: {

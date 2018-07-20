@@ -58,8 +58,6 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   event Invested(address receiver, uint256 tokenCount, uint256 tokens);
 
-  event logPrice(uint price);
-
 
   function Crowdsale(uint256 _rate, address _wallet, uint256 _minTransactionValue) public {
     //require(_startTime >= now);
@@ -69,9 +67,10 @@ contract Crowdsale is Ownable, TestOraclizeCall{
     require(_minTransactionValue > 0);
 
     token = createTokenContract();
-    
+    MintableToken(token).pause();
     rate = _rate;
     wallet = _wallet;
+    
     minTransactionValue = _minTransactionValue;
   }
 
@@ -87,20 +86,20 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   // low level token purchase function
   function buyTokens(address beneficiary) public payable {
     require(beneficiary != address(0));
-    updatePrice(); // Calling oraclize query to update current exchange rate 
+    updatePrice(); // Calling oraclize query to update current exchange rate
     require(validPurchase());
     require(hasClosed != true);
-    
+     
     uint256 weiAmount = msg.value;
-    logPrice(price);
+    
     // calculate token amount to be created
-    tokens = getTokenAmount(weiAmount);
+    uint256 tokens = getTokenAmount(weiAmount);
      
     // update state
     weiRaised = weiRaised.add(weiAmount);
     tokensSold = tokensSold.add(tokens);
 
-    token.pause();
+    
     token.mint(beneficiary,tokens);
     TokenPurchase(msg.sender, beneficiary, weiAmount, tokens);
     forwardFunds();
@@ -127,15 +126,15 @@ contract Crowdsale is Ownable, TestOraclizeCall{
 
   // Override this method to have a way to add business logic to your crowdsale when buying
   // price is referred to current exchange rate of USD in ETH
-  // rate is referred as per token value in cent i.e 1 token = 25 cent
+  // rate is referred as per token value in USD
   function getTokenAmount(uint256 weiAmount) internal view returns(uint256) {
     uint256 centValueOfCustomerEther = price.mul(100).mul(weiAmount) / 1 ether; // price is multiplied by 100 to convert USD to cent
-    uint256 tokenPerCent = 1 ether / rate; 
+    uint256 tokenPerCent = 1 ether / rate;
     return tokenPerCent.mul(centValueOfCustomerEther);
   
   }
 
-  function getTokens(uint256 tokenCount) internal pure returns(uint256) {
+  function getTokens(uint256 tokenCount) internal returns(uint256) {
     return tokenCount.mul(1);
   }
 
@@ -157,6 +156,7 @@ contract Crowdsale is Ownable, TestOraclizeCall{
   function preallocate(address beneficiary, uint256 tokenCount) onlyOwner external {
     require(beneficiary != address(0));
     require(hasClosed != true);
+    uint256 tokens = getTokens(tokenCount);
     token.mint(beneficiary, tokens);
     tokensSold = tokensSold.add(tokens);
     Invested(beneficiary, tokenCount, tokens);

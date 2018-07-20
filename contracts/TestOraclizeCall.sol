@@ -5,10 +5,9 @@ import "installed_contracts/oraclize-api/contracts/usingOraclize.sol"; //Importi
 contract TestOraclizeCall is usingOraclize {
 
     uint public price;
-    uint256 public amt;
     event Log(string text);
     event LogFailure(string text);
-    //event LogPrice(uint256 amt);
+    event LogPrice(uint256 amt);
     mapping(bytes32=>bool) validIds;
 
     function TestOraclizeCall() public {
@@ -16,7 +15,7 @@ contract TestOraclizeCall is usingOraclize {
     }
 
 
-    function __callback(bytes32 _myid, string _result, bytes proof) public {
+    function __callback(bytes32 _myid, string _result, bytes proof){
         if (!validIds[_myid]) revert();
         require(msg.sender == oraclize_cbAddress());
         Log(_result);
@@ -26,13 +25,13 @@ contract TestOraclizeCall is usingOraclize {
 
     }
 
-    /*function oraclizeGetPrice() public view returns (uint256){
+    function oraclizeGetPrice() public constant returns (uint256){
         return oraclize_getPrice("URL");
-    }*/
+    }
    
 
-    function updatePrice() public payable {
-        //LogPrice(oraclize_getPrice("URL"));
+    function updatePrice() payable {
+        LogPrice(oraclize_getPrice("URL"));
         bytes32 queryId = oraclize_query("URL","json(https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD).USD");
         validIds[queryId] = true;
         

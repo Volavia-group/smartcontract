@@ -47,4 +47,3 @@ contract MintableToken is PausableToken {
     return true;
   }
 } 
-
